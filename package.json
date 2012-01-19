@@ -22,6 +22,6 @@
     "jsfiddle" : "", 
     "homepage": "https://github.com/lukebitts/A_star-for-Crafty",
     "files": [
-        "astar.js", 
+        "astar.js"
     ]
 }
