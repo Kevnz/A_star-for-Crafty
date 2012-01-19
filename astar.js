@@ -55,7 +55,7 @@ Crafty.c("AStar",{
 			}
 			open.shift();
 			closed.push(current_node);
-			var adj = this._findAdjacent(current_node);
+			var adj = this._findAdjacent(current_node.tile);
 			for(var i in adj){
 				if(this._nodeInArray(new Node(adj[i]),closed))
 					continue;
@@ -65,7 +65,7 @@ Crafty.c("AStar",{
 						new_node.g = 0;
 						if(weighted != undefined)
 							new_node.g += weighted(current_node.tile,new_node.tile);
-						new_node.h = this._heuristic(new_node, destination);
+						new_node.h = this._heuristic(new_node.tile, destination.tile);
 						new_node.f = new_node.g+new_node.h;
 						
 						open.push(new_node);
