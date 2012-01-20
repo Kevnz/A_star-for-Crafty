@@ -35,7 +35,7 @@ Crafty.c("AStar",{
 		var open = [];
 		var closed = [];
 		var g = 0;
-		var h = this._heuristic(start, destination);
+		var h = this._heuristic(start.tile, destination.tile);
 		var f = g+h;
 		open.push(start);
 		while(open.length > 0){
