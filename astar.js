@@ -20,7 +20,7 @@ Crafty.c("AStar",{
 		this._findAdjacent = f;
 		return this;
 	},
-	findPath:function(position,ignore,weighted,begining,end){
+	findPath:function(ignore,weighted,begining,end){
 		if(this._heuristic == undefined || this._findAdjacent == undefined)
 			throw("Exception: You have to declare a heuristic and an adjacent function");
 		function Node(tile,parent,g,h,f){
@@ -57,9 +57,9 @@ Crafty.c("AStar",{
 			closed.push(current_node);
 			var adj = this._findAdjacent(current_node);
 			for(var i in adj){
-				if((ignore != undefined && !ignore(current_node.tile,adj[i]))){
-					if(this._nodeInArray(new Node(adj[i]),closed))
-						{continue;}
+				if(this._nodeInArray(new Node(adj[i]),closed))
+					continue;
+				if(ignore==undefined || !ignore(current_node.tile,adj[i])){
 					if(!this._nodeInArray(new Node(adj[i]),open)) {
 						var new_node = new Node(adj[i],closed.length-1,-1,-1,-1);
 						new_node.g = 0;
