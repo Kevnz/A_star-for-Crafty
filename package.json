@@ -19,7 +19,7 @@
         "astar",
         "a star"
     ],
-    "jsfiddle" : "http://jsfiddle.net/WVebG/", 
+    "jsfiddle" : "http://jsfiddle.net/WVebG/embedded/", 
     "homepage": "https://github.com/lukebitts/A_star-for-Crafty",
     "files": [
         "astar.js"
