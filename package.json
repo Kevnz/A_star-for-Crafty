@@ -1,6 +1,6 @@
 {
     "name": "AStar",
-    "version": "0.2",
+    "version": "0.3",
     "title": "A*(star) for Crafty",
     "author": {
         "name": "Lucas Bittencourt",
@@ -19,7 +19,7 @@
         "astar",
         "a star"
     ],
-    "jsfiddle" : "", 
+    "jsfiddle" : "http://jsfiddle.net/WVebG/", 
     "homepage": "https://github.com/lukebitts/A_star-for-Crafty",
     "files": [
         "astar.js"
